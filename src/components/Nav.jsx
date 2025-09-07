@@ -15,14 +15,18 @@ export default function Nav() {
   }
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/70 backdrop-blur-md border-b border-sky-200">
       <div className="section py-4 flex items-center justify-between">
-        <div className="font-semibold tracking-wide">
-          <span className="text-brand-500">Ravi</span> Surapati
+        <div className="font-semibold tracking-wide text-sky-700">
+          <span className="text-sky-500">Ravi</span> Surapati
         </div>
         <div className="hidden md:flex gap-4">
           {items.map((it) => (
-            <button key={it.id} onClick={() => go(it.id)} className="px-3 py-1 rounded-full bg-slate-900/60 border border-slate-800 hover:border-brand-600 hover:text-brand-500 transition">
+            <button
+              key={it.id}
+              onClick={() => go(it.id)}
+              className="px-3 py-1 rounded-full bg-white border border-sky-300 text-sky-600 hover:bg-sky-50 transition"
+            >
               {it.label}
             </button>
           ))}
